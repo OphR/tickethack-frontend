@@ -1,42 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <link rel="stylesheet" href="./public/stylesheets/style.css" />
-        <title>Tickethack</title>
-    </head>
-    <body>
-    <div id="header">
-        <h2>Tickethack</h2>
-        <h4 id="cart">Cart</h4>
-        <h4 id="bookings">Bookings</h4>
+<html>
+
+<head>
+  <title>Tickethack</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="index.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&family=Work+Sans:wght@300;400&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div id="header">
+    <h1><a id="title" href="index.html">Tickethack</a></h1>
+    <div>
+      <a class="link" href="cart.html">Cart</a> <a class="link" href="bookings.html">Bookings</a>
     </div>
-    <div id="container">
-        <div id="title">
-            <h1>Explore the world effortlessly by train!</h1>
-        </br>
-            <h3>Compare, book and enjoy cheap prices for train tickets: your journey starts on Tickethack.</h3>  
-        </div>  
-            <div id="content-left">
-                <p><input type="text" id= "text" size="30" maxlength="20" placeholder="Departure" class="depature"/></p>
-                <p><input type="text" id= "text" size="30" maxlength="20" placeholder="Arrival" class="arrival"/></p>
-                </br>
-                </br>
-                </br>
-                <input type="date" id="start" name="trip-start" value=`${date()}` min="2024-01-01" max="2026-12-31" class="date"/>
-                </br>
-                </br>
-                </br>
-                </br>
-                </br>
-                <input type="button" id="button" name="Search" value="Search" />
-            </div>
-            <div id="content-right">
-                <img src="./public/images/train.png">
-                <hr id="ligne">
-                <p>It's time to book your future trip.</p>
-            </div>
+  </div>
+
+  <div id="container">
+    <div id="description">
+      <h2>Explore the world effortlessly by train!</h2>
+      <h3>Compare, book and enjoy cheap prices for train tickets: your journey starts on Tickethack.</h3>
     </div>
-    <script src="/script.js"></script>
-    </body>
+
+    <div id="card-container">
+      <div id="card">
+        <input class="input" id="departure" type="text" placeholder="Departure" />
+        <div class="divider"></div>
+        <input class="input" id="arrival" type="text" placeholder="Arrival" />
+        <input class="input" id="date" type="date" placeholder="Date" />
+        <button id="search">Search</button>
+      </div>
+
+      <div id="results">
+        <img id="results-logo" src="images/train.png" />
+        <div class="divider green"></div>
+        <span>It's time to book your future trip.</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/moment@2.29.3/moment.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
 </html>
